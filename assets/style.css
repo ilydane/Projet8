@@ -53,9 +53,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-body {
 
-}
 section {
 	margin-block: 6em;
 }
@@ -132,6 +130,28 @@ header {
 #banner .arrow_right {
 	right: 10px;
 }
+	.carousel {
+		position: relative;
+		width: 100%;
+		height: 500px; /* Ajuste la hauteur en fonction de ton design */
+		overflow: hidden; /* Cache les images qui ne doivent pas être visibles */
+	 }
+	 
+	 .carousel-image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover; /* Garde l'image centrée et proportionnelle */
+		display: none; /* Cache toutes les images par défaut */
+	 }
+	 
+	 .carousel-image.active {
+		display: block; /* Affiche uniquement l'image active */
+	 }
+	 
+
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
