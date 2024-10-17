@@ -115,7 +115,7 @@ header {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	z-index: -1;
+	z-index: 2;
 	object-fit: cover;
 	object-position: center;
 }
@@ -128,12 +128,11 @@ header {
 
 /* Conteneur principal du carrousel */
 .carousel {
-    position: relative;
+    position: absolute;
     width: 100%;
-    max-width: 2800px; /* Ajuste selon la largeur souhaitée */
-    height: 700px; /* Ajuste selon la hauteur souhaitée */
+    max-width: 2500px; /* Ajuste selon la largeur souhaitée */
+    height: 400px; /* Ajuste selon la hauteur souhaitée */
     overflow: hidden; /* Cacher tout ce qui dépasse */
-    margin: auto;
 }
 
 /* Images du carrousel */
@@ -143,7 +142,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Ajuster l'image pour remplir le conteneur */
+    object-fit: cover; /* Ajuster l'image pour remplir le conteneur */
     opacity: 0; /* Cacher toutes les images */
     transition: opacity 1s ease; /* Animation de transition */
 }
@@ -152,49 +151,51 @@ header {
     opacity: 1; /* Afficher seulement l'image active */
 }
 
-/* Flèches */
+/* Flèches à l'intérieur */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5); /* Optionnel : fond pour améliorer la visibilité */
-    padding: 10px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    color: white;
+    padding: 10px;
+    border: none;
+    outline: none;
 }
 
 .arrow_left {
-    left: 10px;
+    left: 0px; /* Plus proche du bord gauche */
 }
 
 .arrow_right {
-    right: 10px;
+    right: 0px; /* Plus proche du bord droit */
 }
-
-/* Points (indicateurs du carrousel) */
+/* Points en bas */
 .dots {
     position: absolute;
-    bottom: 20px;
+    bottom: 20px; /* Distance ajustée par rapport au bas du carrousel */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    justify-content: center;
+    z-index: 2; /* Assure que les points sont au-dessus de l'image */
 }
 
 .dot {
+    width: 12px;
+    height: 12px;
     margin: 0 5px;
-    width: 13px;
-    height: 13px;
-    background-color: transparent;
-    border: 3px solid #fff;
+    background-color: rgba(255, 255, 255, 0.7); /* Assure qu'ils sont visibles */
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .dot_selected {
-    background-color: #fff;
+    background-color: #fff; /* Bien visible lorsqu'il est sélectionné */
 }
+
 
 
 /* Fin du code CSS pour le carousel */
