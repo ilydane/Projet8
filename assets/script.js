@@ -49,3 +49,8 @@ rightArrow.addEventListener('click', () => {
     currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
     showImage(currentIndex);
 });
+
+let autoSlideInterval = setInterval(() => {
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+    showImage(currentIndex);
+}, 5000); // Change d'image toutes les 5 secondes

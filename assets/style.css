@@ -130,8 +130,8 @@ header {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1000px; /* Ajuste selon la largeur souhaitée */
-    height: 500px; /* Ajuste selon la hauteur souhaitée */
+    max-width: 2800px; /* Ajuste selon la largeur souhaitée */
+    height: 700px; /* Ajuste selon la hauteur souhaitée */
     overflow: hidden; /* Cacher tout ce qui dépasse */
     margin: auto;
 }
@@ -143,7 +143,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajuster l'image pour remplir le conteneur */
+    object-fit: contain; /* Ajuster l'image pour remplir le conteneur */
     opacity: 0; /* Cacher toutes les images */
     transition: opacity 1s ease; /* Animation de transition */
 }
